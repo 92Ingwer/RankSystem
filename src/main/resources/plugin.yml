@@ -2,4 +2,7 @@ name: RankSystem
 version: '1.0'
 main: org.kim.rankSystem.RankSystem
 api-version: '1.21'
-authors: [ 92Ingwer ]
+authors: [92Ingwer]
+commands:
+  group:
+  setsign:

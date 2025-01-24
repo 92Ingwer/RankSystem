@@ -1,4 +1,4 @@
-package org.kim.SkyGens.utils;
+package org.kim.rankSystem.utils;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
@@ -15,7 +15,9 @@ public class InventoryBuilder {
         Component title = new MiniMessageBuilder(minimessage).get();
         this.inventory = Bukkit.createInventory(null, size, title);
         int sizeforarr = inventory.getSize();
+        //Kein Glas
         if (grayglas == 0) return;
+        //An allen Seiten
         if (grayglas == 1) {
             Integer[] glasslots = {0, 1, 2, 3, 4, 5, 6, 7, 8, sizeforarr - 1, sizeforarr - 2, sizeforarr - 3, sizeforarr - 4, sizeforarr - 5, sizeforarr - 6, sizeforarr - 7, sizeforarr - 8, sizeforarr - 9, sizeforarr - 18, sizeforarr - 27, sizeforarr - 36, sizeforarr - 10, sizeforarr - 19, sizeforarr - 28, sizeforarr, 36, sizeforarr - 46, 9, 17};
             List<Integer> glasslotsList = Arrays.asList(glasslots);
@@ -25,6 +27,7 @@ public class InventoryBuilder {
                 }
             }
         }
+        //Überall Glas
         if (grayglas == 2) {
             for (int i = 0; i < inventory.getSize(); i++) {
                 inventory.setItem(i, new ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).name(Component.text("")).build());

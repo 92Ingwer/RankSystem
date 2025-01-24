@@ -1,4 +1,4 @@
-package org.kim.SkyGens.utils;
+package org.kim.rankSystem.utils;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
